@@ -1,0 +1,4 @@
+#ifndef _Logboek_import_icpp_init_stub
+#define _Logboek_import_icpp_init_stub
+#include "OleDB/init"
+#endif

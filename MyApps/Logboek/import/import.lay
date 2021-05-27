@@ -1,0 +1,11 @@
+LAYOUT(ImportLayout, 700, 384)
+	ITEM(ProgressIndicator, progress, RightPosZ(4, 80).BottomPosZ(52, 20))
+	ITEM(LineEdit, logtext, SetFont(Monospace()).HSizePosZ(4, 4).VSizePosZ(4, 84))
+	ITEM(StaticText, statusline, HSizePosZ(52, 88).BottomPosZ(53, 19))
+	ITEM(Label, dv___3, SetLabel(t_("Status:")).LeftPosZ(8, 40).BottomPosZ(53, 19))
+	ITEM(Button, b_open, SetLabel(t_("Open")).LeftPosZ(12, 88).BottomPosZ(13, 27))
+	ITEM(Button, b_exit, SetLabel(t_("Sluiten")).LeftPosZ(600, 88).BottomPosZ(13, 27))
+	ITEM(Button, b_process, SetLabel(t_("Start")).LeftPosZ(112, 88).BottomPosZ(13, 27))
+	ITEM(Option, o_filter, SetLabel(t_("Filter: PR, PR-ON, ST, W_LOG, WZH")).HSizePosZ(216, 268).BottomPosZ(20, 16))
+END_LAYOUT
+

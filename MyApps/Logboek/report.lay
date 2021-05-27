@@ -1,0 +1,37 @@
+LAYOUT(ReportLayout, 600, 364)
+	ITEM(Upp::Button, b_report, SetLabel(t_("Opvragen")).HCenterPosZ(68, 0).BottomPosZ(20, 24))
+	ITEM(ReportView, pg, HSizePosZ(8, 8).VSizePosZ(8, 60))
+	ITEM(Upp::Button, b_print, SetLabel(t_("Printen")).SetFont(StdFontZ(20)).LeftPosZ(8, 144).BottomPosZ(8, 44))
+	ITEM(Upp::Button, b_exit, SetLabel(t_("Sluiten")).SetFont(StdFontZ(20)).RightPosZ(8, 144).BottomPosZ(8, 44))
+END_LAYOUT
+
+LAYOUT(ReportLayout_3, 600, 364)
+	ITEM(Upp::Button, b_report, SetLabel(t_("Opvragen")).HCenterPosZ(68, 0).BottomPosZ(20, 24))
+	ITEM(Upp::RichTextView, pg, HSizePosZ(8, 8).VSizePosZ(8, 60))
+	ITEM(Upp::Button, b_print, SetLabel(t_("Printen")).SetFont(StdFontZ(20)).LeftPosZ(8, 144).BottomPosZ(8, 44))
+	ITEM(Upp::Button, b_exit, SetLabel(t_("Sluiten")).SetFont(StdFontZ(20)).RightPosZ(8, 144).BottomPosZ(8, 44))
+END_LAYOUT
+
+LAYOUT(ReportLayout_2, 600, 400)
+	ITEM(Upp::Label, dv___0, SetLabel(t_("Datum:")).SetAlign(ALIGN_RIGHT).LeftPosZ(8, 42).TopPosZ(12, 19))
+	ITEM(Upp::DropDate, _edit_date, LeftPosZ(56, 104).TopPosZ(12, 19))
+	ITEM(Upp::Button, b_date_last, Tip(t_("Laatste")).LeftPosZ(500, 32).TopPosZ(8, 32))
+	ITEM(Upp::Button, b_date_next, Tip(t_("Volgende")).LeftPosZ(468, 32).TopPosZ(8, 32))
+	ITEM(Upp::Button, b_date_prev, Tip(t_("Vorige")).LeftPosZ(404, 32).TopPosZ(8, 32))
+	ITEM(Upp::Button, b_date_now, Tip(t_("Vandaag")).LeftPosZ(436, 32).TopPosZ(8, 32))
+	ITEM(Upp::Button, b_date_first, Tip(t_("Eerste")).LeftPosZ(372, 32).TopPosZ(8, 32))
+	ITEM(Upp::StaticText, dv___7, SetText(t_("Ploeg:")).SetAlign(ALIGN_RIGHT).LeftPosZ(164, 36).TopPosZ(14, 17))
+	ITEM(Upp::Switch, _edit_ploeg, SetLabel(t_("nacht\ndag\navond")).LeftPosZ(204, 144).TopPosZ(16, 16))
+	ITEM(Upp::Button, b_report, SetLabel(t_("Opvragen")).HCenterPosZ(68, 0).BottomPosZ(20, 24))
+	ITEM(Upp::RichTextView, pg, HSizePosZ(8, 8).VSizePosZ(44, 60))
+	ITEM(Upp::Button, b_print, SetLabel(t_("Printen")).SetFont(StdFontZ(20)).LeftPosZ(8, 144).BottomPosZ(8, 44))
+	ITEM(Upp::Button, b_exit, SetLabel(t_("Sluiten")).SetFont(StdFontZ(20)).RightPosZ(8, 144).BottomPosZ(8, 44))
+END_LAYOUT
+
+LAYOUT(ReportSelectLayout, 365, 24)
+	ITEM(Upp::Label, dv___0, SetLabel(t_("Datum:")).SetAlign(ALIGN_RIGHT).LeftPosZ(4, 42).TopPosZ(2, 19))
+	ITEM(Upp::DropDate, _edit_date, LeftPosZ(52, 104).TopPosZ(2, 19))
+	ITEM(Upp::StaticText, dv___2, SetText(t_("Ploeg:")).SetAlign(ALIGN_RIGHT).LeftPosZ(160, 48).VSizePosZ(2, 4))
+	ITEM(Upp::Switch, _edit_ploeg, SetLabel(t_("nacht\ndag\navond")).LeftPosZ(212, 144).TopPosZ(4, 15))
+END_LAYOUT
+

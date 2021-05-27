@@ -1,0 +1,60 @@
+description "STEWAD v2.0 \377";
+
+uses
+	CtrlLib,
+	plugin/sqlite3,
+	SqlCtrl,
+	GridCtrl,
+	DropGrid,
+	RepGen;
+
+uses(IMPORT) Logboek/import;
+
+file
+	logboek.h,
+	main.cpp,
+	logboek.cpp,
+	about.cpp,
+	logboek.lay,
+	util.h,
+	util.cpp,
+	cache.cpp,
+	Input readonly separator,
+	input.cpp,
+	input.h,
+	input.lay,
+	Report readonly separator,
+	report.h,
+	report.cpp,
+	report.lay,
+	Journal readonly separator,
+	journal.h,
+	journal.cpp,
+	journal.lay,
+	journal.brc,
+	History readonly separator,
+	history.h,
+	history.cpp,
+	history.lay,
+	Manager readonly separator,
+	manager.lay,
+	manager.h,
+	mgrEdit.cpp,
+	manager.cpp,
+	mgrRemove.cpp,
+	recources readonly separator,
+	logboek.iml,
+	version.h,
+	logboek.rc,
+	logboek.sch,
+	info readonly separator,
+	records.txt,
+	todo.txt;
+
+mainconfig
+	"" = "GUI",
+	"" = "GUI IMPORT",
+	"" = "GUI ADMIN",
+	"" = "GUI MT ADMIN IMPORT",
+	"" = "ADMIN IMPORT";
+

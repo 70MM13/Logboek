@@ -1,0 +1,10 @@
+LAYOUT(LogboekLayout, 600, 424)
+	ITEM(Upp::Button, b_inv, SetLabel(t_("Invoeren")).SetFont(StdFontZ(35)).HCenterPosZ(240, -144).VCenterPosZ(96, -124))
+	ITEM(Upp::LabelBox, dv___1, HSizePosZ(0, 0).BottomPosZ(84, 24))
+	ITEM(Upp::Button, b_his, SetLabel(t_("Historie")).SetFont(StdFontZ(35)).HCenterPosZ(240, 144).VCenterPosZ(96, -124))
+	ITEM(Upp::Button, b_log, SetLabel(t_("Logboek")).SetFont(StdFontZ(35)).HCenterPosZ(240, -144).VCenterPosZ(96, 20))
+	ITEM(Upp::Button, b_edit, SetLabel(t_("Mankaart")).SetFont(StdFontZ(35)).HCenterPosZ(240, 144).VCenterPosZ(96, 20))
+	ITEM(Upp::Button, b_man, SetLabel(t_("Beheer")).SetFont(StdFontZ(25)).HCenterPosZ(184, -144).BottomPosZ(24, 48))
+	ITEM(Upp::Button, b_exit, SetLabel(t_("Sluiten")).SetFont(StdFontZ(25)).HCenterPosZ(184, 148).BottomPosZ(24, 48))
+END_LAYOUT
+

@@ -1,0 +1,65 @@
+#include <winver.h>
+
+#define CONCAT(a,b) a ## b
+#define STRINGIZE_(x) #x
+#define STRINGIZE(x) STRINGIZE_(x)
+
+#define V_VERSION "v2.0"
+
+/*
+	flags don't work in RC?
+*/
+
+#ifdef _DEBUG
+	#define V_DEBUG " DEBUG"
+#else
+	#define V_DEBUG ""
+#endif
+
+#ifdef flagADMIN
+	#define V_ADMIN " ADMIN"
+#else
+	#define V_ADMIN ""
+#endif
+
+#ifdef flagIMPORT
+	#define V_IMPORT " IMPORT"
+#else
+	#define V_IMPORT ""
+#endif
+
+#define VERSION V_VERSION V_DEBUG V_ADMIN V_IMPORT
+
+5555 ICON DISCARDABLE "icon.ico"
+
+1 VERSIONINFO
+  FILEVERSION 2,0,0,0
+  PRODUCTVERSION 2,0,0,0
+  FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+  FILEFLAGS VS_FF_DEBUG
+#else
+  FILEFLAGS 0x0L
+#endif
+  FILEOS VOS__WINDOWS32
+  FILETYPE VFT_APP
+  FILESUBTYPE 0x0L
+BEGIN
+  BLOCK "StringFileInfo" BEGIN
+    BLOCK "041304B0" BEGIN
+      VALUE "Comments", "Vervanging van logboek-applicatie STEWAD. Geschreven in C++, gebruikmakend van Ultimate++ framework en SQLite database"
+      //VALUE "LegalTrademarks", ""
+      VALUE "OriginalFilename", "logboek.exe"
+      VALUE "ProductVersion", VERSION
+      VALUE "ProductName", "Logboek"
+      VALUE "FileDescription", "Logboek: STEWAD makeover"
+      VALUE "CompanyName", ""
+      VALUE "FileVersion", "v2.0"
+      VALUE "LegalCopyright", "Copyright \xA9 2013 W.J.Kroes"
+      VALUE "InternalName", "STEWAD2"
+    END
+  END
+  BLOCK "VarFileInfo" BEGIN
+    VALUE "Translation", 0x0413, 1200
+  END
+END

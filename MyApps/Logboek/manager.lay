@@ -1,0 +1,105 @@
+LAYOUT(ManagerTabLayout, 400, 168)
+	ITEM(Upp::SqlArray, editlist, HSizePosZ(0, 0).VSizePosZ(0, 44))
+	ITEM(Upp::Button, b_remove, SetLabel(t_("Verwijderen")).LeftPosZ(88, 72).BottomPosZ(9, 27))
+	ITEM(Upp::Button, b_edit, SetLabel(t_("Bewerken")).LeftPosZ(168, 72).BottomPosZ(9, 27))
+	ITEM(Upp::Button, b_add, SetLabel(t_("Toevoegen")).LeftPosZ(8, 72).BottomPosZ(9, 27))
+	ITEM(Upp::Label, infobox, HSizePosZ(248, 8).BottomPosZ(8, 28))
+END_LAYOUT
+
+LAYOUT(ManagerLayout, 640, 400)
+	ITEM(Upp::TabCtrl, ManagerTabs, HSizePosZ(0, 0).VSizePosZ(8, 0))
+END_LAYOUT
+
+LAYOUT(ManagerLayout_oud, 640, 356)
+	ITEM(Upp::Button, b_exit, SetLabel(t_("Sluiten")).Tip(t_("\vImporteer oud logboek")).LeftPosZ(28, 88).BottomPosZ(16, 28))
+	ITEM(Upp::Button, b_import, SetLabel(t_("Import")).Tip(t_("\vImporteer oud logboek")).RightPosZ(24, 88).BottomPosZ(16, 28))
+	ITEM(Upp::Button, b_SqlComm, SetLabel(t_("SQL Commander")).RightPosZ(120, 108).BottomPosZ(16, 28))
+	ITEM(Upp::TabCtrl, ManagerTabs, HSizePosZ(8, 8).VSizePosZ(8, 60))
+END_LAYOUT
+
+LAYOUT(EditPersonLayout, 400, 200)
+	ITEM(Upp::EditInt, p_number, LeftPosZ(104, 76).TopPosZ(12, 19))
+	ITEM(Upp::EditString, first_name, MaxChars(30).LeftPosZ(104, 236).TopPosZ(36, 19))
+	ITEM(Upp::EditString, mid_name, MaxChars(10).LeftPosZ(104, 76).TopPosZ(60, 19))
+	ITEM(Upp::EditString, last_name, MaxChars(30).LeftPosZ(104, 236).TopPosZ(84, 19))
+	ITEM(Upp::Option, p_active, SetLabel(t_("Actief in keuzelijsten")).LeftPosZ(12, 128).TopPosZ(112, 16))
+	ITEM(Upp::Button, ok, SetLabel(t_("Ok")).HCenterPosZ(68, -42).BottomPosZ(12, 24))
+	ITEM(Upp::Button, cancel, SetLabel(t_("Annuleren")).HCenterPosZ(72, 44).BottomPosZ(12, 24))
+	ITEM(Upp::Label, dv___7, SetLabel(t_("Kloknummer")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(12, 19))
+	ITEM(Upp::Label, dv___8, SetLabel(t_("Voornaam")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(36, 19))
+	ITEM(Upp::Label, dv___9, SetLabel(t_("Tussenvoegsel")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(60, 19))
+	ITEM(Upp::Label, dv___10, SetLabel(t_("Achternaam")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(84, 19))
+	ITEM(Upp::EditInt, p_id, SetEditable(false).SetFrame(NullFrame()).LeftPosZ(12, 64).TopPosZ(168, 19))
+END_LAYOUT
+
+LAYOUT(EditActivityLayout, 400, 152)
+	ITEM(Upp::EditString, act_short, MaxChars(10).HSizePosZ(104, 220).TopPosZ(12, 19))
+	ITEM(Upp::EditString, act_long, MaxChars(30).HSizePosZ(104, 60).TopPosZ(36, 19))
+	ITEM(Upp::Option, act_active, SetLabel(t_("Actief in keuzelijsten")).HSizePosZ(12, 260).TopPosZ(64, 16))
+	ITEM(Upp::Button, ok, SetLabel(t_("Ok")).HSizePosZ(124, 208).TopPosZ(112, 28))
+	ITEM(Upp::Button, cancel, SetLabel(t_("Annuleren")).HSizePosZ(208, 120).TopPosZ(112, 28))
+	ITEM(Upp::Label, dv___5, SetLabel(t_("Afkorting")).SetAlign(ALIGN_RIGHT).HSizePosZ(12, 304).TopPosZ(12, 19))
+	ITEM(Upp::Label, dv___6, SetLabel(t_("Omschrijving")).SetAlign(ALIGN_RIGHT).HSizePosZ(12, 304).TopPosZ(36, 19))
+	ITEM(Upp::EditInt, act_id, SetEditable(false).SetFrame(NullFrame()).LeftPosZ(12, 64).TopPosZ(120, 19))
+END_LAYOUT
+
+LAYOUT(EditIssuetypeLayout, 400, 152)
+	ITEM(Upp::EditString, type_short, MaxChars(10).LeftPosZ(104, 76).TopPosZ(12, 19))
+	ITEM(Upp::EditString, type_long, MaxChars(30).LeftPosZ(104, 236).TopPosZ(36, 19))
+	ITEM(Upp::Option, type_active, SetLabel(t_("Actief in keuzelijsten")).LeftPosZ(12, 128).TopPosZ(64, 16))
+	ITEM(Upp::Button, ok, SetLabel(t_("Ok")).HCenterPosZ(68, -42).BottomPosZ(12, 28))
+	ITEM(Upp::Button, cancel, SetLabel(t_("Annuleren")).HCenterPosZ(72, 44).BottomPosZ(12, 28))
+	ITEM(Upp::Label, dv___5, SetLabel(t_("Afkorting")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(12, 19))
+	ITEM(Upp::Label, dv___6, SetLabel(t_("Omschrijving")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(36, 19))
+	ITEM(Upp::EditInt, type_id, SetEditable(false).SetFrame(NullFrame()).LeftPosZ(12, 64).TopPosZ(120, 19))
+END_LAYOUT
+
+LAYOUT(EditMachineLayout, 400, 176)
+	ITEM(WithDropChoice<DataPusher>, line, LeftPosZ(104, 236).TopPosZ(12, 19))
+	ITEM(WithDropChoice<DataPusher>, machinetype, LeftPosZ(104, 236).TopPosZ(40, 19))
+	ITEM(Upp::EditString, machine_description, MaxChars(40).LeftPosZ(104, 236).TopPosZ(68, 19))
+	ITEM(Upp::Option, m_active, SetLabel(t_("Actief in keuzelijsten")).LeftPosZ(12, 128).TopPosZ(100, 16))
+	ITEM(Upp::Button, ok, SetLabel(t_("Ok")).HCenterPosZ(68, -42).BottomPosZ(12, 24))
+	ITEM(Upp::Button, cancel, SetLabel(t_("Annuleren")).HCenterPosZ(72, 44).BottomPosZ(12, 24))
+	ITEM(Upp::Label, dv___6, SetLabel(t_("Lijn")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(12, 19))
+	ITEM(Upp::Label, dv___7, SetLabel(t_("Machinetype")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(40, 19))
+	ITEM(Upp::Label, dv___8, SetLabel(t_("Omschrijving")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(68, 19))
+	ITEM(Upp::EditInt, m_id, SetEditable(false).SetFrame(NullFrame()).LeftPosZ(12, 64).TopPosZ(144, 19))
+	ITEM(ToolBar, tool_line, HSizePosZ(344, 4).TopPosZ(8, 28))
+	ITEM(ToolBar, tool_machinetype, HSizePosZ(344, 4).TopPosZ(36, 28))
+END_LAYOUT
+
+LAYOUT(EditMachinetypeLayout, 400, 128)
+	ITEM(Upp::EditString, mtype_description, MaxChars(40).LeftPosZ(104, 236).TopPosZ(12, 19))
+	ITEM(Upp::Option, mtype_active, SetLabel(t_("Actief in keuzelijsten")).LeftPosZ(104, 128).TopPosZ(44, 16))
+	ITEM(Upp::Button, ok, SetLabel(t_("Ok")).HCenterPosZ(68, -42).BottomPosZ(12, 28))
+	ITEM(Upp::Button, cancel, SetLabel(t_("Annuleren")).HCenterPosZ(72, 44).BottomPosZ(12, 28))
+	ITEM(Upp::Label, dv___4, SetLabel(t_("Omschrijving")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(12, 19))
+	ITEM(Upp::EditInt, mtype_id, SetEditable(false).SetFrame(NullFrame()).LeftPosZ(12, 64).TopPosZ(96, 19))
+END_LAYOUT
+
+LAYOUT(EditLineLayout, 400, 176)
+	ITEM(WithDropChoice<DataPusher>, department, LeftPosZ(104, 236).TopPosZ(12, 19))
+	ITEM(Upp::EditInt, line_number, MaxChars(10).LeftPosZ(104, 76).TopPosZ(40, 19))
+	ITEM(Upp::EditString, line_description, MaxChars(30).LeftPosZ(104, 236).TopPosZ(68, 19))
+	ITEM(Upp::Option, l_active, SetLabel(t_("Actief in keuzelijsten")).LeftPosZ(104, 128).TopPosZ(100, 16))
+	ITEM(Upp::Button, ok, SetLabel(t_("Ok")).HCenterPosZ(68, -42).BottomPosZ(12, 24))
+	ITEM(Upp::Button, cancel, SetLabel(t_("Annuleren")).HCenterPosZ(72, 44).BottomPosZ(12, 24))
+	ITEM(Upp::Label, dv___6, SetLabel(t_("Afdeling")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(12, 19))
+	ITEM(Upp::Label, dv___7, SetLabel(t_("Lijnnummer")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(40, 19))
+	ITEM(Upp::Label, dv___8, SetLabel(t_("Omschrijving")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(68, 19))
+	ITEM(Upp::EditInt, l_id, SetEditable(false).SetFrame(NullFrame()).LeftPosZ(12, 64).TopPosZ(144, 19))
+	ITEM(ToolBar, tool_department, HSizePosZ(344, 4).TopPosZ(8, 28))
+END_LAYOUT
+
+LAYOUT(EditDepartmentLayout, 400, 152)
+	ITEM(Upp::EditString, dep_short, MaxChars(10).LeftPosZ(104, 76).TopPosZ(12, 19))
+	ITEM(Upp::EditString, dep_long, MaxChars(30).LeftPosZ(104, 236).TopPosZ(36, 19))
+	ITEM(Upp::Option, dep_active, SetLabel(t_("Actief in keuzelijsten")).LeftPosZ(104, 128).TopPosZ(68, 16))
+	ITEM(Upp::Button, ok, SetLabel(t_("Ok")).HCenterPosZ(68, -42).BottomPosZ(12, 28))
+	ITEM(Upp::Button, cancel, SetLabel(t_("Annuleren")).HCenterPosZ(72, 44).BottomPosZ(12, 28))
+	ITEM(Upp::Label, dv___5, SetLabel(t_("Afkorting")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(12, 19))
+	ITEM(Upp::Label, dv___6, SetLabel(t_("Omschrijving")).SetAlign(ALIGN_RIGHT).LeftPosZ(12, 84).TopPosZ(36, 19))
+	ITEM(Upp::EditInt, dep_id, SetEditable(false).SetFrame(NullFrame()).LeftPosZ(12, 64).TopPosZ(120, 19))
+END_LAYOUT
+

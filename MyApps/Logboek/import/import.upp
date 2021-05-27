@@ -1,0 +1,12 @@
+description "Logboek: import STEWAD database\377";
+
+noblitz;
+
+uses
+	ODBC;
+
+file
+	import.h,
+	import.cpp,
+	import.lay;
+

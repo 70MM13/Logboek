@@ -1,0 +1,47 @@
+Storingen
+	[00] Storingsnummer (int)
+	[01] Datum (date/time)
+	[02] Storingstype (code)
+	[03] Storingssoort (code)
+	[04] Afdeling
+	[05] Lijn
+	[06] Machine (code)
+	[07] Machine_omschrijving
+	[08] Monteur_achternaam
+	[09] Monteur_voornaam
+	[10] Kloknummer
+	[11] Aanvangstijd
+	[12] Duur_in_minuten
+	[13] Aard
+	[14] Oorzaak
+	[15] Oplossing
+	[16] Opmerking
+	
+Storingssoort (BED, ELEC, INST, MECH)
+	Storingssoort (code)
+	Omschrijving
+
+Storingstypen (TVT, DR, OPL, OVL, PR, PR-ON, ST, VL, W_LOG, WZH, ZIEK)
+	Storingstype (code)
+	Omschrijving
+
+Monteurs
+	Kloknummer (uniek)
+	Voornaam
+	Achternaam
+
+Afdeling_Lijnnummer
+	BPCS (uniek)
+	Afdeling
+	Omschrijving
+
+Lijnnummer_Machinenummer
+	Lijnnummer
+	Machinenummer
+	Machine_omschrijving
+
+Machinepark (ongebruikt?)
+	Afdeling
+	Machinenummer
+	Machine_omschrijving
+

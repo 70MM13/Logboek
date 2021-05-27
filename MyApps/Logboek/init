@@ -1,0 +1,10 @@
+#ifndef _Logboek_icpp_init_stub
+#define _Logboek_icpp_init_stub
+#include "CtrlLib/init"
+#include "plugin/sqlite3/init"
+#include "SqlCtrl/init"
+#include "GridCtrl/init"
+#include "DropGrid/init"
+#include "RepGen/init"
+#include "Logboek/import/init"
+#endif

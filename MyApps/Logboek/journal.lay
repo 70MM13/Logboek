@@ -1,0 +1,7 @@
+LAYOUT(JournalLayout, 600, 364)
+	ITEM(Upp::Button, b_report, SetLabel(t_("Opvragen")).HCenterPosZ(68, 0).BottomPosZ(20, 24))
+	ITEM(ReportView, pg, HSizePosZ(8, 8).VSizePosZ(8, 60))
+	ITEM(Upp::Button, b_print, SetLabel(t_("Printen")).SetFont(StdFontZ(20)).LeftPosZ(8, 144).BottomPosZ(8, 44))
+	ITEM(Upp::Button, b_exit, SetLabel(t_("Sluiten")).SetFont(StdFontZ(20)).RightPosZ(8, 144).BottomPosZ(8, 44))
+END_LAYOUT
+

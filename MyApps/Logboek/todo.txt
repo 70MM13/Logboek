@@ -1,0 +1,24 @@
+- configuratiebestand: .CFG
+	- locatie database [home]
+
+- vragen naar locatie database, eventueel maken? niet maken, is aparte optie
+	+ bij geen database, melding en alles disablen [13-10-2013]
+- log bestand bij database? nee
+
+- DB-table: Machinepark
+	>> Afdeling / Machinenummer / Machine_omschrijving
+	- naar database MACHINETYPES 
+	- niet afhankelijk van afdeling maar uniek merk/type
+	
++ alle edit en remove dialogs eigen try/catch 
+		-> try/catch in callback vanaf menu/editlist [16-10-2013]
++ alle edit dialogs "nieuw" bij Null id? [15-10-2013]
+- alle editlists in manager: ctrl+space wel in list maar niet in DB
+
++ IMPORT: import in 'achtergrond' dialog blijft normaal werken
+	-> Threads... [23-10-2013]
+	
++ Logboek Rapportage: Report print-preview ipv QTF-view [03-04-2014]
++ Rapportage: algemeen maken - functie met SqlBool where en te kiezen template [01-10-2014]
++ Rapportage in "Report" houden en "Logboek" naar nieuwe "Journal" [01-10-2014] 
++ History aanpassen voor rapportage [01-10-2014]
